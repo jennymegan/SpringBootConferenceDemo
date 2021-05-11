@@ -36,7 +36,7 @@ public class SpeakersController {
         return speakerRepository.saveAndFlush(speaker);
     }
 
-    @RequestMapping(value="{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value="{id}", method = RequestMethod.DELETE) //nb there is now a shorthand of @deletemapping
     public void delete(@PathVariable Long id){
         speakerRepository.deleteById(id);
     }
